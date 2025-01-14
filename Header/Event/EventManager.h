@@ -2,10 +2,13 @@
 #include <SFML/Graphics.hpp>
 using namespace sf;
 
-namespace EventM {
-    class EventManager {
-    public:
-        void pollEvents(RenderWindow* game_window); 
-        bool isKeyPressed(sf::Keyboard::Key key);   
-    };
+namespace EventM
+{
+	class EventManager
+	{
+	public:
+		void pollEvents(RenderWindow* game_window);
+		bool isKeyPressed(sf::Keyboard::Key key);
+		bool isLeftMouseButtonPressed();
+	};
 }
