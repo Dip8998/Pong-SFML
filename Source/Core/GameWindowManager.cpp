@@ -8,10 +8,8 @@ namespace Core
     }
 
     void GameWindowManager::createGameWindow() {
-        game_window->create(
-            VideoMode(game_window_width, game_window_height),
-            game_title
-        );
+        game_window->create(VideoMode(game_window_width, game_window_height),
+            game_title);
     }
 
     bool GameWindowManager::isGameRunning() {
