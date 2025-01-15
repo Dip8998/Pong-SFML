@@ -27,16 +27,22 @@ namespace UI
 		float right_score_position_y = 30.0f;
 
 		int player1_score = 0;
+		int player2_score = 0;
 
 
 		void loadFontTexture();
 		void createLeftScoreText();
 		void createRightScoreText();
 
+		string formatScore(int score);
+
 	public:
 		UIService();
 		void render(RenderWindow* game_window);
 		void update();
+
+		void incrementPlayer1Score();
+		void incrementPlayer2Score();
 	};
 
 }
