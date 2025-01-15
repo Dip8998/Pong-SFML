@@ -4,9 +4,11 @@
 #include "../../Header/Event/EventManager.h"
 #include "../../Header/Gameplay/Boundary/Boundary.h"
 #include "../../Header/Utility/TimeService.h"
+#include "../../Header/UI/UIService.h"
 
 using namespace EventM;
 using namespace Utility;
+using namespace UI;
 
 namespace Gameplay
 {
@@ -22,18 +24,18 @@ namespace Gameplay
 		Ball* ball;
 		Paddle* player1;
 		Paddle* player2;
-		
-		void initialize();
-		EventManager* event_manager;
 		Boundary* boundary;
+
+		void initialize();
+
+		EventManager* event_manager;
 		TimeService* time_service;
+		UIService* ui_service;
 
 
 	public:
 		GameplayManager(EventManager* manager);
 		void update();
 		void render(RenderWindow* game_window);
-
-
 	};
 }

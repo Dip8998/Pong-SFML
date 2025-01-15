@@ -10,6 +10,7 @@ namespace Gameplay
 		event_manager = manager;
 		initialize();
 		boundary = new Boundary();
+		ui_service = new UIService;
 	}
 
 	void GameplayManager::initialize()
@@ -25,6 +26,7 @@ namespace Gameplay
 		ball->render(game_window);
 		player1->render(game_window);
 		player2->render(game_window);
+		ui_service->render(game_window);
 	}
 
 	void GameplayManager::update()
