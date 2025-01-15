@@ -8,7 +8,7 @@ namespace Core
 		event_manager = new EventManager();
 		gameplay_manager = new GameplayManager(event_manager);
 		sound_manager = new SoundManager();
-
+		SoundManager::PlayBackgroundMusic();
 		game_window_manager->initialize();
 	}
 
