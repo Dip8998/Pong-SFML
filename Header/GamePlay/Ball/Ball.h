@@ -1,11 +1,9 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include "../../Header/Gameplay/Paddle/Paddle.h"
-#include "../../Header/Utility/TimeService.h"
+#include "../../../Header/Gameplay/Paddle/Paddle.h"
 
 using namespace sf;
-using namespace Utility;
 
 namespace Gameplay
 {
@@ -64,11 +62,22 @@ namespace Gameplay
 
 		void updateDelayTime(float delta_time);
 
+		bool had_left_collison = false;
+		bool had_right_collison = false;
+
 	public:
 		Ball();
+
 		void reset();
 		void update(Paddle* player1, Paddle* player2, TimeService* time_service);
 		void render(RenderWindow* game_window);
+
+		bool hasLeftCollisionOccurred();
+		void updateLeftCollisionState(bool value);
+
+		bool hasRightCollisionOccurred();
+		void updateRightCollisionState(bool value);
+
 
 	};
 }
